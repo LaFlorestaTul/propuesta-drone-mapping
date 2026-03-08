@@ -915,6 +915,137 @@
     }
   }
 
+  /* ─── RESPONSIVE ─── */
+
+  /* Slides fluidos en pantallas menores a 1300px */
+  @media (max-width: 1300px) {
+    .slide {
+      width: 100%;
+      max-width: 1280px;
+      height: auto;
+      min-height: unset;
+    }
+    .slide-inner {
+      padding: 40px 48px;
+    }
+  }
+
+  /* Tablet */
+  @media (max-width: 768px) {
+    html { font-size: 17px; }
+    .slide-inner { padding: 32px 28px; }
+    .two-col,
+    .two-col-wide {
+      grid-template-columns: 1fr;
+      gap: 24px;
+    }
+    .flow-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .invest-grid {
+      grid-template-columns: 1fr;
+    }
+    .guarantee-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .terms-grid-custom {
+      grid-template-columns: repeat(2, 1fr) !important;
+    }
+    .checklist,
+    .steps-list {
+      grid-template-columns: 1fr;
+    }
+    .timeline-row {
+      grid-template-columns: 80px 1fr;
+    }
+    .timeline-row > *:last-child {
+      grid-column: 1 / -1;
+    }
+    .stat-row {
+      flex-wrap: wrap;
+    }
+    .stat-card {
+      flex: 1 1 40%;
+    }
+    .section-num {
+      font-size: 3rem;
+      right: 28px;
+      top: 20px;
+    }
+    .client-grid {
+      gap: 16px;
+    }
+    .client-grid img {
+      max-height: 40px;
+      max-width: 100px;
+    }
+    .compare-table {
+      font-size: 0.58rem;
+    }
+    .cover-center h1 {
+      font-size: 2.4rem;
+    }
+  }
+
+  /* Movil */
+  @media (max-width: 480px) {
+    html { font-size: 15px; }
+    .slide {
+      margin: 8px auto;
+    }
+    .slide-inner {
+      padding: 24px 18px;
+    }
+    h1 { font-size: 2rem; }
+    .cover-center h1 { font-size: 2rem; }
+    h2 { font-size: 1.5rem; }
+    .flow-grid {
+      grid-template-columns: 1fr;
+    }
+    .guarantee-grid {
+      grid-template-columns: 1fr;
+    }
+    .terms-grid-custom {
+      grid-template-columns: 1fr !important;
+    }
+    .timeline-row {
+      grid-template-columns: 1fr;
+    }
+    .timeline-row > * {
+      grid-column: 1;
+    }
+    .stat-card {
+      flex: 1 1 100%;
+    }
+    .section-num {
+      display: none;
+    }
+    .compare-table {
+      font-size: 0.55rem;
+    }
+    .compare-table th,
+    .compare-table td {
+      padding: 6px 4px;
+    }
+    .cover-top,
+    .cover-bottom {
+      flex-direction: column;
+      gap: 12px;
+      align-items: flex-start;
+    }
+    .cover-bg {
+      background-position: center;
+    }
+    .invest-badge {
+      position: static;
+      display: inline-block;
+      margin-bottom: 8px;
+    }
+    .roi-box {
+      margin-top: 16px;
+    }
+  }
+
   /* ─── PRINT ─── */
   @media print {
     body { background: white; }
@@ -964,7 +1095,7 @@
       </div>
       <div class="cover-date">
         Vigencia: 30 dias naturales<br>
-        7 de marzo de 2026
+        8 de marzo de 2026
       </div>
     </div>
   </div>
@@ -1353,7 +1484,7 @@
           </div>
           <div class="invest-row">
             <span>Servicio mensual</span>
-            <span class="price">$3,800 MXN / mes</span>
+            <span class="price">$4,500 MXN / mes</span>
           </div>
           <p class="invest-note">50% al firmar + 50% al arrancar. Incluye 100 leads, sin cobro extra hasta 150.</p>
         </div>
@@ -1367,13 +1498,13 @@
           </div>
           <div class="invest-row">
             <span>Servicio mensual (2 agentes)</span>
-            <span class="price">$4,800 MXN / mes</span>
+            <span class="price">$5,500 MXN / mes</span>
           </div>
           <div class="invest-savings">Ahorro de $6,720 MXN vs contratar por separado</div>
           <p class="invest-note">100 leads por agente (200 total), sin cobro extra hasta 150 por agente.</p>
         </div>
       </div>
-      <p style="text-align: center; font-size: 0.6rem; margin-top: 12px; opacity: 0.4;">*Precio + IVA si se requiere factura. Fase 2 por separado: $12,000 MXN setup, mensualidad sube a $4,800/mes.</p>
+      <p style="text-align: center; font-size: 0.6rem; margin-top: 12px; opacity: 0.4;">*Precio + IVA si se requiere factura. Fase 2 por separado: $12,000 MXN setup, mensualidad sube a $5,500/mes.</p>
     </div>
     <div class="slide-footer">
       <span>Drone Mapping · Confidencial</span>
@@ -1406,7 +1537,7 @@
             <tbody>
               <tr>
                 <td>Costo mensual</td>
-                <td class="hl">$3,800</td>
+                <td class="hl">$4,500</td>
                 <td>$15,000 — $20,000</td>
                 <td>$0</td>
               </tr>
@@ -1430,7 +1561,7 @@
               </tr>
               <tr>
                 <td>Costo anual</td>
-                <td class="hl">~$45,600</td>
+                <td class="hl">~$54,000</td>
                 <td>~$180,000 — $240,000</td>
                 <td>Incalculable</td>
               </tr>
@@ -1440,7 +1571,7 @@
         <div style="display: flex; flex-direction: column; justify-content: flex-end; height: 100%;">
           <div class="roi-box">
             <div class="roi-amount">Con un solo flip adicional, recuperas toda tu inversion anual.</div>
-            <p class="roi-desc">Una propiedad adquirida gracias a respuesta rapida genera <strong style="color: white;">$80,000 a $250,000 MXN</strong> de ganancia. El costo anual del servicio ($45,600 MXN) es menos de la cuarta parte de un asistente humano.</p>
+            <p class="roi-desc">Una propiedad adquirida gracias a respuesta rapida genera <strong style="color: white;">$80,000 a $250,000 MXN</strong> de ganancia. El costo anual del servicio ($54,000 MXN) es menos de la cuarta parte de un asistente humano.</p>
           </div>
         </div>
       </div>
@@ -1535,7 +1666,7 @@
     </div>
     <div class="slide-body" style="justify-content: flex-start; padding-top: 8px;">
       <h2 style="margin-bottom: 20px;">Terminos y <em>Condiciones</em></h2>
-      <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px;">
+      <div class="terms-grid-custom" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px;">
         <!-- Forma de Pago -->
         <div style="background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 8px; padding: 20px 18px;">
           <div style="font-size: 1.4rem; margin-bottom: 10px;">💳</div>
@@ -1552,8 +1683,7 @@
           <div style="font-weight: 600; font-size: 0.75rem; margin-bottom: 10px; color: var(--verde-accent); text-transform: uppercase; letter-spacing: 0.1em;">Soporte Incluido</div>
           <div style="font-size: 0.62rem; color: rgba(255,255,255,0.6); line-height: 1.7;">
             <div style="padding: 4px 0; border-bottom: 1px solid rgba(255,255,255,0.05);">Incidencias del sistema: <strong style="color: var(--verde-glow);">ilimitado</strong></div>
-            <div style="padding: 4px 0; border-bottom: 1px solid rgba(255,255,255,0.05);">Solicitudes de cambio: hasta <strong>8 hrs/mes</strong></div>
-            <div style="padding: 4px 0; border-bottom: 1px solid rgba(255,255,255,0.05);">Horas adicionales: $700 MXN/hr</div>
+            <div style="padding: 4px 0; border-bottom: 1px solid rgba(255,255,255,0.05);">Ajustes menores y optimizaciones: <strong style="color: var(--verde-glow);">incluidos</strong></div>
             <div style="padding: 4px 0;">Emergencias: respuesta en &lt;4 hrs</div>
           </div>
         </div>
@@ -1565,16 +1695,6 @@
             <div style="padding: 4px 0; border-bottom: 1px solid rgba(255,255,255,0.05);">Cambios mayores se cotizan aparte</div>
             <div style="padding: 4px 0; border-bottom: 1px solid rgba(255,255,255,0.05);">Cliente proporciona numero de WhatsApp nuevo</div>
             <div style="padding: 4px 0;">Baneo por uso indebido se cobra por separado</div>
-          </div>
-        </div>
-        <!-- Propiedad Intelectual -->
-        <div style="background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 8px; padding: 20px 18px;">
-          <div style="font-size: 1.4rem; margin-bottom: 10px;">🔒</div>
-          <div style="font-weight: 600; font-size: 0.75rem; margin-bottom: 10px; color: var(--verde-accent); text-transform: uppercase; letter-spacing: 0.1em;">Propiedad Intelectual</div>
-          <div style="font-size: 0.62rem; color: rgba(255,255,255,0.6); line-height: 1.7;">
-            <div style="padding: 4px 0; border-bottom: 1px solid rgba(255,255,255,0.05);">Flujos, prompts y arquitectura: Drone Mapping</div>
-            <div style="padding: 4px 0; border-bottom: 1px solid rgba(255,255,255,0.05);">Uso exclusivo mientras servicio activo</div>
-            <div style="padding: 4px 0;">Datos de leads: propiedad del cliente</div>
           </div>
         </div>
         <!-- Suspension -->
